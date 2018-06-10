@@ -1,2 +1,6 @@
-# TimeSeries
-Set of Time Series Solutions and Comparisons
+# TimeSeries Analysis in Python
+### Collection of few Time Series Solutions and their Comparisons
+
+
+
+
