@@ -11,11 +11,11 @@ Time Series is different from other statistical problems like a regular regressi
 
 Because of the inherent properties of a Time Series, there are various steps involved in analyzing it. We are not going deep into those steps as there are several documents and project samples made available by many prominent Data Scientists for reference. 
 
-It is obvious that who ever I discuss the various methods that are followed in Time Series, it always ends with a comparison of methods and approaches and it ends no where. Frankly, it cannot end anywhere because of the difference in the characterestics of data like voluima, quality, frequency, etc.  
+It is obvious that whoever I discuss about the various methods that are followed in Time Series, it always ends with a comparison of methods and approaches and it always ends no where. Frankly, it cannot end anywhere very quickly because of the difference in the characteristics of data like frequency, volume, quality, etc.  
 
 Please note that the aim of this article is to present what I have found and measured using different techniques and methods used in Time Series models. 
 
-Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustarations, I hope it would somehow make the reader's life easier to pick some what a similar approach when he/she finds a resemblance with the  data at ahand. 
+Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustrations, I hope it would somehow make the reader's life easier to pick some what a similar approach when he/she finds a resemblance with the data at ahand. 
 
 
 
