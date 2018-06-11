@@ -11,7 +11,7 @@ Time Series is different from other statistical problems like a regular regressi
 
 2. **Seasonality**: Variations specific to a particular time period and/or repetitions of the same fluctuations in the time cycles are treated as Seasonality. For example, if you see the sales of slippers over time, you will invariably find higher sales in summer seasons.
 
-Because of the inherent properties of a Time Series, there are various steps involved in analyzing it. We are not going deep into those steps as there are several documents and project samples made available by many prominent Data Scientists for reference. 
+Because of the inherent properties of a Time Series, there are various steps involved in the preparation of data. We are not going deep into those steps as there are several documents and project samples made available by many prominent Data Scientists for reference. Our focus, atleast for now, is on the methods, hyperparameters and the results 
 
 It is obvious that whoever I discuss about the various methods that are followed in Time Series, it always ends with a comparison of methods and approaches and it always ends no where. Frankly, it cannot end anywhere very quickly because of the difference in the characteristics of data like frequency, volume, quality, etc.  
 
@@ -19,10 +19,10 @@ Please note that the aim of this project is to present what I have found and mea
 
 Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustrations, I hope it would somehow make the reader's life easier to pick a similar approach when he/she finds a resemblance with the data at ahand. 
 
-There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. which means the list is not closed. As I get spare time, I will try to include more models and approaches into this list and update the compilation of results. 
+There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. [etc. - means the list is not closed]. My spare time would be used to include more models and approaches into this list and update the compilation of results. 
 
 
->Disclaimer 1: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach
+>Disclaimer 1: The findings are based on certain set of sample data commonly available. Always consider the characteristics of the data used while comparing results of the architecture/approach
 
 >Disclaimer 2: The findings are based on few trials of hyper parameter tuning. Better results can be obtained if further tuning is done
 
@@ -99,8 +99,11 @@ Just tried adding more LSTM layers with `return_sequences=True` (Passing the out
 ```
 Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12 (3 LSTM layers of 8 neurons each)
 
+- The best score that we got if 13.53(train) and 37.48(test). 
+- In all these above methods, 96 rows are taken for Training and 48 for Testing. 
+- Test data readings are in the range of 305 to 622.
 
+So the prediction could be with an error of 37.48 units (here 1000 passengers) which means an actual figure of 37480 (OMG).
 
-
-
+#### What is the way out?
 
