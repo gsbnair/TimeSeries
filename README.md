@@ -21,10 +21,8 @@ Here for illustrating different methods, I have used different sets of data. Tho
 
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. which means the list is not closed. As I get spare time, I will try to include more models and approaches into this list and update the compilation of results. 
 
-```
-**Disclaimer**: The findings are based on certain set of data (most of the sample data). 
-You have to consider the characteristics of the data also while comparing the results of these approaches.
-```
+
+` *** Disclaimer: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach *** `
 
 ## Getting Started
 
