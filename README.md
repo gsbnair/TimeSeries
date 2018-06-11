@@ -22,7 +22,9 @@ Here for illustrating different methods, I have used different sets of data. Tho
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. which means the list is not closed. As I get spare time, I will try to include more models and approaches into this list and update the compilation of results. 
 
 
-` *** Disclaimer: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach *** `
+`Disclaimer 1: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach`
+
+`Disclaimer 2: The findings are based on few trials of hyper parameter tuning. Better results can be obtained if further tuning is done`
 
 ## Getting Started
 
@@ -37,19 +39,25 @@ Let us use LSTM for forecasting a time Series and check the results.
 1. Data: international-airline-passengers.csv
 2. Code: TimeSeriesPrediction-LSTM.ipynb
 ```
-The score we get is: Epochs - 100  Train Score: 22.92 RMSE  Test Score: 47.53 RMSE
+Score: Epochs - 100  Train Score: 22.92 RMSE  Test Score: 47.53 RMSE
 
 # 2. IndRNN
 
+### Building a Longer and Deeper Neural network
+
 **IndRNN** - `Independently Recurrent Neural Network`  is an architecture in DL which accepts `multi-layer Neurons`.
 The network is linked in such a way that neurons within each layer are not connected and are independent. But they all have links to neurons to other layers. You can have any number of such layers placed in the network.
-More on this can be found [here](https://arxiv.org/abs/1803.04831)
+
+More on this can be found [here for original paper published](https://arxiv.org/abs/1803.04831)
+Implementation in keras is taken from [here](https://github.com/titu1994/Keras-IndRNN) 
 
 See what we get when IndRNN is used:
 ```
 1. Data: international-airline-passengers.csv
 2. Code: TimeSeriesPrediction-IndRNN.ipynb
 ```
+Score: Epochs - 100, Train Score: 23.73 RMSE - Test Score: 52.20 RMSE [Cell = 4,4]
+
 
 
 
