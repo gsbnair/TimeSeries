@@ -22,7 +22,8 @@ Here for illustrating different methods, I have used different sets of data. Tho
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. which means the list is not closed. As I get spare time, I will try to include more models and approaches into this list and update the compilation of results. 
 
 ```
-**Disclaimer**: The findings are based on certain set of data (most of the sample data). You have to consider the characteristics of the data also while comparing the results of these approaches.
+**Disclaimer**: The findings are based on certain set of data (most of the sample data). 
+You have to consider the characteristics of the data also while comparing the results of these approaches.
 ```
 
 ## Getting Started
@@ -36,7 +37,7 @@ There is a recent tendency to use Deep Learning methodologies like LSTM for solv
 Let us use LSTM for forecasting a time Series and check the results. 
 ```
 1. Data: international-airline-passengers.csv
-2. Code: Time Series Prediction - LSTM.ipynb
+2. Code: TimeSeriesPrediction-LSTM.ipynb
 ```
 The score we get is: Epochs - 100  Train Score: 22.92 RMSE  Test Score: 47.53 RMSE
 
