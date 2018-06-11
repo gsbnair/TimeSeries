@@ -26,9 +26,14 @@ There are Different approaches to solve a Time Series problem. We will be mainly
 
 `Disclaimer 2: The findings are based on few trials of hyper parameter tuning. Better results can be obtained if further tuning is done`
 
+`Disclaimer 3: Some of the comments and explanations needs to be modified in order to match with tuned parameters.`
+
+`Disclaimer 4: I believe in completeness in every notebook. Hence an you may find repetitions in data preparation processes.`   
+
+
 ## Getting Started
 
-# 1. LSTM
+## 1. LSTM
 
 **LSTM** - `Long Short Term Memory `  is an architecture in DL which `conveniently` preserves the state of previous iterations and behaves accordingly when it reaches final stage where it predicts. 
 
@@ -41,14 +46,15 @@ Let us use LSTM for forecasting a time Series and check the results.
 ```
 Score: Epochs - 100  Train Score: 22.92 RMSE  Test Score: 47.53 RMSE
 
-# 2. IndRNN
+## 2. IndRNN
 
 ### Building a Longer and Deeper Neural network
 
 **IndRNN** - `Independently Recurrent Neural Network`  is an architecture in DL which accepts `multi-layer Neurons`.
 The network is linked in such a way that neurons within each layer are not connected and are independent. But they all have links to neurons to other layers. You can have any number of such layers placed in the network.
 
-More on this can be found [here for original paper published](https://arxiv.org/abs/1803.04831)
+Original paper published can be found [here](https://arxiv.org/abs/1803.04831)
+
 Implementation in keras is taken from [here](https://github.com/titu1994/Keras-IndRNN) 
 
 See what we get when IndRNN is used:
@@ -58,7 +64,40 @@ See what we get when IndRNN is used:
 ```
 Score: Epochs - 100, Train Score: 23.73 RMSE - Test Score: 52.20 RMSE [Cell = 4,4]
 
+## Time Series using Window method
 
+We can also phrase the problem so that multiple, recent time steps can be used to make the prediction for the next time step. When phrased as a regression problem, the input variables are t-2, t-1, t and the output variable is t+1.
+
+`Window_size` is sometimes called `Look_back`
+
+## 3. LSTM - Window method
+
+LSTM in Window method:
+```
+1. Data: international-airline-passengers.csv
+2. Code: TimeSeriesPrediction-Window-LSTM.ipynb
+```
+Score: Epochs - 100, Train Score: 13.53 RMSE Test Score: 37.48 RMSE (LSTM - 64) Lookback-12
+
+## 4. IndRNN - Window method
+
+IndRNN in Window method:
+```
+1. Data: international-airline-passengers.csv
+2. Code: TimeSeriesPrediction-Window-IndRNN.ipynb
+```
+Score: Epochs - 100, Train Score: 23.25 RMSE Test Score: 49.35 RMSE [Cell = 3,3] Look-back=6
+
+## 5. LSTM - MultiLayered - Window method
+
+LSTM - MultiLayered in Window method:
+
+Just tried adding more LSTM layers with return_sequences=True (Passing the output of one layer to next)
+```
+1. Data: international-airline-passengers.csv
+2. Code: TimeSeriesPrediction-Window-LSTM-MultiLayer.ipynb
+```
+Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12 (3 LSTM layers of 8 neurons each)
 
 
 
