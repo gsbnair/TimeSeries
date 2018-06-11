@@ -22,13 +22,13 @@ Here for illustrating different methods, I have used different sets of data. Tho
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. which means the list is not closed. As I get spare time, I will try to include more models and approaches into this list and update the compilation of results. 
 
 
-`Disclaimer 1: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach`
+>Disclaimer 1: The findings are based on certain set of sample data. Always consider the characteristics of the data used while comparing results of the architecture/approach
 
-`Disclaimer 2: The findings are based on few trials of hyper parameter tuning. Better results can be obtained if further tuning is done`
+>Disclaimer 2: The findings are based on few trials of hyper parameter tuning. Better results can be obtained if further tuning is done
 
-`Disclaimer 3: Some of the comments and explanations needs to be modified in order to match with tuned parameters.`
+>Disclaimer 3: Some of the comments and explanations needs to be modified in order to match with tuned parameters.
 
-`Disclaimer 4: I believe in completeness in every notebook. Hence an you may find repetitions in data preparation processes.`   
+>Disclaimer 4: I believe in completeness in every notebook. Hence you may find repetitions in data preparation processes.  
 
 
 ## Getting Started
@@ -92,7 +92,7 @@ Score: Epochs - 100, Train Score: 23.25 RMSE Test Score: 49.35 RMSE [Cell = 3,3]
 
 LSTM - MultiLayered in Window method:
 
-Just tried adding more LSTM layers with return_sequences=True (Passing the output of one layer to next)
+Just tried adding more LSTM layers with `return_sequences=True` (Passing the output of one layer to next)
 ```
 1. Data: international-airline-passengers.csv
 2. Code: TimeSeriesPrediction-Window-LSTM-MultiLayer.ipynb
