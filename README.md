@@ -103,7 +103,10 @@ Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12
 - In all these above methods, 96 rows are taken for Training and 48 for Testing. 
 - Test data readings are in the range of 305 to 622.
 
-So the prediction could be with an error of 37.48 units (here 1000 passengers) which means an actual figure of 37480 (OMG).
+>A difference of 37 on a value of 305 (Approximately 10% Error) is not a good sign 
+>A difference of 37 on a value of 622, (Approximately 6% Error) I believe, could be accomodated 
+>So the prediction could be with an error of 37.48 units (here units are in 1000 passengers) which means an actual deviation of 37480 (OMG). 
 
 #### What is the way out?
+
 
