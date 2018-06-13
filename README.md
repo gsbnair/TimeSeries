@@ -38,7 +38,6 @@ Objective of this Repository is to publish projects coming under Machine Learnin
 
 I wish after publishing few projects, I should compile them and gradually it will take an order.
 
-####TODO 
 - [X] Time Series
 - [ ] Automation of ML
 - [ ] DEAP_TPOT Module
