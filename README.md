@@ -37,8 +37,9 @@ There are Different approaches to solve a Time Series problem. We will be mainly
 Objective of this Repository is to publish projects coming under Machine Learning. I will be focusing especially on old (established) techniques versus latest trends and technologies. Initially, the repository will contain folders scattered with projects specific to a particular type of architecture/approach/problem. 
 
 I wish after publishing few projects, I should compile them and gradually it will take an order.
-- TODO 
-- [ ] Time Series
+
+####TODO 
+- [X] Time Series
 - [ ] Automation of ML
 - [ ] DEAP_TPOT Module
 - [ ] Genetic Algorithm
