@@ -33,6 +33,19 @@ There are Different approaches to solve a Time Series problem. We will be mainly
 
 ## Getting Started
 
+#### TODO
+Objective of this Repository is to publish projects coming under Machine Learning. I will be focusing especially on old (established) techniques versus latest trends and technologies. Initially, the repository will contain folders scattered with projects specific to a particular type of architecture/approach/problem. 
+
+I wish after publishing few projects, I should compile them and gradually it will take an order.
+- TODO 
+- [ ] Time Series
+- [ ] Automation of ML
+- [ ] DEAP_TPOT Module
+- [ ] Genetic Algorithm
+- [ ] Predictive Maintenance
+- [ ] Prophet (Facebook)
+
+
 ## 1. LSTM
 
 **LSTM** - `Long Short Term Memory `  is an architecture in DL which `conveniently` preserves the state of previous iterations and behaves accordingly when it reaches final stage where it predicts. 
@@ -68,7 +81,7 @@ Score: Epochs - 100, Train Score: 23.73 RMSE - Test Score: 52.20 RMSE [Cell = 4,
 
 We can also phrase the problem so that multiple, recent time steps can be used to make the prediction for the next time step. When phrased as a regression problem, the input variables are t-2, t-1, t and the output variable is t+1.
 
-`Window_size` is sometimes called `Look_back`
+`Window_size` is also called `Look_back`
 
 ## 3. LSTM - Window method
 
@@ -103,10 +116,17 @@ Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12
 - In all these above methods, 96 rows are taken for Training and 48 for Testing. 
 - Test data readings are in the range of 305 to 622.
 
->A difference of 37 on a value of 305 (Approximately 10% Error) is not a good sign 
->A difference of 37 on a value of 622, (Approximately 6% Error) I believe, could be accomodated 
+>A difference of 37 on a value of 305 (Approximately 10% Error) is not a good sign
+
+>A difference of 37 on a value of 622, (Approximately 6% Error) I believe, could be accomodated
+
 >So the prediction could be with an error of 37.48 units (here units are in 1000 passengers) which means an actual deviation of 37480 (OMG). 
 
 #### What is the way out?
 
+The solution is within the problem! We have been running the solutions for 100 epochs. Not enough....
+As per the paper about [IndRNN](https://arxiv.org/abs/1803.04831), you have to run more than 5000 time steps to achieve desired results.
+
+
+### How about using ARIMA? Or SARIMA? 
 
