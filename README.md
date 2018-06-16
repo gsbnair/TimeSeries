@@ -148,7 +148,7 @@ Given below are the scores obtained when used different hyper parameters:
 - Train Score:  4.08 RMSE Test Score: 33.65 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=20
 - Train Score: 11.99 RMSE Test Score: 30.38 RMSE [Cell = 32,32,32] Look-back=12, epochs=500, batch_size=10
 
-Better than the least score (37) previously obtained.
+The last run is better than the least score (37) previously obtained. Also notice epochs-500 gives better results than epochs-5000.  
 
 Don't you think still it can be improved? 
 
@@ -162,4 +162,4 @@ Don't you think still it can be improved?
 
 
 
-By the way, some of my fellow Data Scientists face situations like [this](https://www.youtube.com/watch?v=BKorP55Aqvg&index=6&list=RDs7AXskSxxMk). Did you face any?
+By the way, some of the Data Scientists complain facing situations like [this](https://www.youtube.com/watch?v=BKorP55Aqvg&index=6&list=RDs7AXskSxxMk). Did you face any?
