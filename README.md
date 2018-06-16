@@ -17,6 +17,14 @@ It is obvious that whoever I discuss about the various methods that are followed
 
 Please note that the aim of this project is to present what I have found and measured using different techniques and methods used in Time Series models. 
 
+*NOTE:* You might have come across various literature explaining *'How data is prepared`* and *'How different models are implemented`*. Most of such writings end with a note similar to:
+
+>Finally we have a forecast. But not a very good forecast. This is just to get an idea. Now, it is left to you to refine the methodology further and make a better solution.  
+
+What is the use of it? If you are sharing knowledge, then try to be patient and write it with openness. Why hiding certain information? 
+
+What I am trying here is to explain with maximum possible clarity and take you through various approaches and reaching a point where my resources/hardware are limiting me to not go further. 
+
 Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustrations, I hope it would somehow make the reader's life easier to pick a similar approach when he/she finds a resemblance with the data at ahand. 
 
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. [etc. - means the list is not closed]. My spare time would be used to include more models and approaches into this list and update the compilation of results. 
@@ -36,14 +44,15 @@ There are Different approaches to solve a Time Series problem. We will be mainly
 #### TODO
 Objective of this Repository is to publish projects coming under Machine Learning. I will be focusing especially on old (established) techniques versus latest trends and technologies. Initially, the repository will contain folders scattered with projects specific to a particular type of architecture/approach/problem. 
 
-I wish after publishing few projects, I should compile them and gradually it will take an order.
+I wish after publishing few projects, I should compile them and gradually it will take better shape.
 
-- [X] Time Series
+- [X] Time Series - Comparison (This Document)
 - [ ] Automation of ML
 - [ ] DEAP_TPOT Module
 - [ ] Genetic Algorithm
 - [ ] Predictive Maintenance
 - [ ] Prophet (Facebook)
+- [ ] MXNet (DEEP Learning - A popular Neural Net Implementation)
 
 
 ## 1. LSTM
@@ -122,11 +131,35 @@ Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12
 
 >So the prediction could be with an error of 37.48 units (here units are in 1000 passengers) which means an actual deviation of 37480 (OMG). 
 
-#### What is the way out?
+>This way of analysing scores manually is not a good idea. In one of the coming posts, I will start using the percentage of error which makes life easier to comare apples - to - apples. But still the thrust produced by the error-score-percentage would be directly proportional to the magnitude of the data point which can be understandable by only the owner of the data and her/his expectations.
 
-The solution is within the problem! We have been running the solutions for 100 epochs. Not enough....
-As per the paper about [IndRNN](https://arxiv.org/abs/1803.04831), you have to run more than 5000 time steps to achieve desired results.
+Coming back to the question: How to improve the scores? 
+
+We have been running the solutions for 100 epochs. Not enough....
+As per the paper about [IndRNN](https://arxiv.org/abs/1803.04831), you have to run in the range of 5000 time steps to achieve desired results.
+
+The let's try that..
+I picked up option no. 4 (TimeSeriesPrediction-Window-IndRNN.ipynb). 
+Given below are the scores obtained when used different hyper parameters:
+
+# Train Score: 10.22 RMSE Test Score: 31.26 RMSE [Cell = 64,128,64] Look-back=12, epochs=500, batch_size=10
+# Train Score:  1.32 RMSE Test Score: 38.71 RMSE [Cell = 64,128,64] Look-back=12, epochs=5000, batch_size=10
+# Train Score:  3.63 RMSE Test Score: 37.60 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=10
+# Train Score:  4.08 RMSE Test Score: 33.65 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=20
+# Train Score: 11.99 RMSE Test Score: 30.38 RMSE [Cell = 32,32,32] Look-back=12, epochs=500, batch_size=10
+
+Better than the least score (37) previously obtained.
+
+Don't you think still it can be improved? 
+
+>1. We have been using the data as it is execpt a small tweak (standardisation) using minmaxscaler. Should we leave it there or do more tweaking so that it will be easy for the model to get trained?
+
+>2. How about using ARIMA? Or SARIMA? 
+
+>3. Or something else? 
+
+*Let us answer all the questions one by one in the coming instalments.*
 
 
-### How about using ARIMA? Or SARIMA? 
 
+By the way, some of my fellow Data Scientists face situations like [this](https://www.youtube.com/watch?v=BKorP55Aqvg&index=6&list=RDs7AXskSxxMk). Did you face any?
