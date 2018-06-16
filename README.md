@@ -142,11 +142,11 @@ The let's try that..
 I picked up option no. 4 (TimeSeriesPrediction-Window-IndRNN.ipynb). 
 Given below are the scores obtained when used different hyper parameters:
 
-# Train Score: 10.22 RMSE Test Score: 31.26 RMSE [Cell = 64,128,64] Look-back=12, epochs=500, batch_size=10
-# Train Score:  1.32 RMSE Test Score: 38.71 RMSE [Cell = 64,128,64] Look-back=12, epochs=5000, batch_size=10
-# Train Score:  3.63 RMSE Test Score: 37.60 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=10
-# Train Score:  4.08 RMSE Test Score: 33.65 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=20
-# Train Score: 11.99 RMSE Test Score: 30.38 RMSE [Cell = 32,32,32] Look-back=12, epochs=500, batch_size=10
+> Train Score: 10.22 RMSE Test Score: 31.26 RMSE [Cell = 64,128,64] Look-back=12, epochs=500, batch_size=10
+> Train Score:  1.32 RMSE Test Score: 38.71 RMSE [Cell = 64,128,64] Look-back=12, epochs=5000, batch_size=10
+> Train Score:  3.63 RMSE Test Score: 37.60 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=10
+> Train Score:  4.08 RMSE Test Score: 33.65 RMSE [Cell = 128,128,128] Look-back=12, epochs=5000, batch_size=20
+> Train Score: 11.99 RMSE Test Score: 30.38 RMSE [Cell = 32,32,32] Look-back=12, epochs=500, batch_size=10
 
 Better than the least score (37) previously obtained.
 
