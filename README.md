@@ -159,6 +159,6 @@ Don't you think still it can be improved?
 
 *We will answer all such questions one by one in the coming instalments.*
 
-
+Second instalment can be found [here](https://github.com/gsbnair/TimeSeries-2)
 
 By the way, some of the Data Scientists complain facing situations like [this](https://www.youtube.com/watch?v=BKorP55Aqvg&index=6&list=RDs7AXskSxxMk). Did you face any?
