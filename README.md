@@ -25,7 +25,7 @@ What is the use of it? If you are sharing knowledge, then try to be patient and 
 
 What I am trying here is to explain with maximum possible clarity and take you through various approaches and reaching a point where my resources/hardware are limiting me to not go further. 
 
-Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustrations, I hope it would somehow make the reader's life easier to pick a similar approach when he/she finds a resemblance with the data at ahand. 
+Here for illustrating different methods, I have used different sets of data. Though they are just for the purpose of illustrations, I hope it would somehow make the reader's life easier so that they can pick a similar approach when he/she finds a resemblance with the data at ahand. 
 
 There are Different approaches to solve a Time Series problem. We will be mainly focusing on LSTM, IndRNN, ARIMA, SARIMA, etc. [etc. - means the list is not closed]. My spare time would be used to include more models and approaches into this list and update the compilation of results. 
 
@@ -39,8 +39,6 @@ There are Different approaches to solve a Time Series problem. We will be mainly
 >Disclaimer 4: I believe in completeness in every notebook. Hence you may find repetitions in data preparation processes.  
 
 
-## Getting Started
-
 #### TODO
 Objective of this Repository is to publish projects coming under Machine Learning. I will be focusing especially on old (established) techniques versus latest trends and technologies. Initially, the repository will contain folders scattered with projects specific to a particular type of architecture/approach/problem. 
 
@@ -52,8 +50,9 @@ I wish after publishing few projects, I should compile them and gradually it wil
 - [ ] Genetic Algorithm
 - [ ] Predictive Maintenance
 - [ ] Prophet (Facebook)
-- [ ] MXNet (DEEP Learning - A popular Neural Net Implementation)
+- [ ] MXNet (DEEP Learning - A popular Neural Network Implementation)
 
+## Getting Started
 
 ## 1. LSTM
 
@@ -131,7 +130,7 @@ Score: Epochs - 100, Train Score: 26.15 RMSE  Test Score: 69.45 RMSE Lookback-12
 
 >So the prediction could be with an error of 37.48 units (here units are in 1000 passengers) which means an actual deviation of 37480 (OMG). 
 
->This way of analysing scores manually is not a good idea. In one of the coming posts, I will start using the percentage of error which makes life easier to comare apples - to - apples. But still the thrust produced by the error-score-percentage would be directly proportional to the magnitude of the data point which can be understandable by only the owner of the data and her/his expectations.
+This way of analysing scores manually is not a good idea. In one of the coming posts, I will start using the percentage of error which makes life easier to comare apples - to - apples. But still the thrust produced by the error-score-percentage would be directly proportional to the magnitude of the data point which can be understandable by only the owner of the data and her/his expectations.
 
 Coming back to the question: How to improve the scores? 
 
@@ -158,7 +157,7 @@ Don't you think still it can be improved?
 
 >3. Or something else? 
 
-*Let us answer all the questions one by one in the coming instalments.*
+*We will answer all such questions one by one in the coming instalments.*
 
 
 
