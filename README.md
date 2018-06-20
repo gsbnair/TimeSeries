@@ -45,8 +45,8 @@ Objective of this Repository is to publish projects coming under Machine Learnin
 I wish after publishing few projects, I should compile them and gradually it will take better shape.
 
 - [X] Time Series - Comparison (This Document)
-- [ ] Automation of ML
-- [ ] DEAP_TPOT Module
+- [X] Automation of ML
+- [X] DEAP_& TPOT Modules
 - [ ] Genetic Algorithm
 - [ ] Predictive Maintenance
 - [ ] Prophet (Facebook)
